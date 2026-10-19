@@ -1,1 +1,679 @@
 
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet+ — Privacy Policy / Política de Privacidade / Política de Privacidad</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        pet: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.05);
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(34, 197, 94, 0.4);
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(34, 197, 94, 0.7);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans transition-colors duration-300 min-h-screen flex flex-col antialiased selection:bg-pet-500 selection:text-white">
+
+    <!-- Sticky Navigation Bar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <!-- App Logo and Name -->
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-pet-600 to-emerald-400 flex items-center justify-center text-white shadow-md shadow-pet-500/20">
+                    <i class="fa-solid fa-paw text-xl"></i>
+                </div>
+                <div>
+                    <span class="font-bold text-xl tracking-tight text-slate-900 dark:text-white flex items-center gap-1.5">
+                        Pet+ <span class="text-xs px-2 py-0.5 rounded-full bg-pet-100 text-pet-800 dark:bg-pet-900/60 dark:text-pet-400 font-semibold">PSSN Labs</span>
+                    </span>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 hidden sm:block" id="header-subtitle">Privacy Documentation</p>
+                </div>
+            </div>
+
+            <!-- Controls (Language Selector + Theme Toggle) -->
+            <div class="flex items-center space-x-2 sm:space-x-4">
+                <!-- Language Selector -->
+                <div class="relative">
+                    <label for="lang-select" class="sr-only">Select Language</label>
+                    <div class="flex items-center bg-slate-100 dark:bg-slate-800 rounded-xl px-2.5 py-1.5 border border-slate-200 dark:border-slate-700 focus-within:ring-2 focus-within:ring-pet-500">
+                        <i class="fa-solid fa-globe text-slate-500 dark:text-slate-400 text-xs sm:text-sm mr-2"></i>
+                        <select id="lang-select" onchange="changeLanguage(this.value)" class="bg-transparent text-xs sm:text-sm font-medium focus:outline-none cursor-pointer pr-1 text-slate-700 dark:text-slate-200">
+                            <option value="en" class="bg-white dark:bg-slate-900">English (EN)</option>
+                            <option value="pt-br" class="bg-white dark:bg-slate-900">Português (PT-BR)</option>
+                            <option value="es" class="bg-white dark:bg-slate-900">Español (ES)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Dark / Light Theme Toggle -->
+                <button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-pet-600 dark:hover:text-pet-400 border border-slate-200 dark:border-slate-700 transition-all focus:outline-none focus:ring-2 focus:ring-pet-500">
+                    <i id="theme-icon-sun" class="fa-solid fa-sun hidden text-amber-400"></i>
+                    <i id="theme-icon-moon" class="fa-solid fa-moon text-slate-600 dark:text-slate-300"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        
+        <!-- Hero Header Card -->
+        <div class="mb-8 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-pet-500/10 via-emerald-500/5 to-transparent border border-pet-500/20 dark:border-pet-500/10 relative overflow-hidden">
+            <div class="absolute -right-8 -bottom-8 w-40 h-40 bg-pet-500/10 rounded-full blur-2xl pointer-events-none"></div>
+            <div class="relative z-10">
+                <span class="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-pet-700 dark:text-pet-400 bg-pet-100 dark:bg-pet-950/80 px-3 py-1 rounded-full mb-3 border border-pet-200 dark:border-pet-800">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span id="label-policy">Legal Document</span>
+                </span>
+                <h1 id="policy-title" class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-2">
+                    Privacy Policy — Pet+
+                </h1>
+                <div class="flex items-center text-sm text-slate-500 dark:text-slate-400 font-medium">
+                    <i class="fa-regular fa-calendar-check mr-2"></i>
+                    <span id="last-updated">Last updated: October 2026</span>
+                </div>
+                <p id="policy-intro" class="mt-4 text-base text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed">
+                    PSSN Labs respects the privacy of Pet+ users. This policy explains, in simple terms, how information is handled in the current version of the app.
+                </p>
+            </div>
+        </div>
+
+        <!-- Layout Grid: Sidebar TOC + Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            
+            <!-- Sidebar / Table of Contents (Sticky on Desktop) -->
+            <aside class="lg:col-span-1">
+                <div class="sticky top-24 p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+                    <h2 id="toc-title" class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 flex items-center gap-2">
+                        <i class="fa-solid fa-list-ul"></i>
+                        <span>Sections</span>
+                    </h2>
+                    
+                    <!-- Search Input for sections -->
+                    <div class="relative mb-2">
+                        <input type="text" id="sec-search" onkeyup="filterSections()" placeholder="Search..." class="w-full text-xs pl-8 pr-3 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-transparent focus:border-pet-500 focus:outline-none transition">
+                        <i class="fa-solid fa-magnifying-glass absolute left-2.5 top-2.5 text-xs text-slate-400"></i>
+                    </div>
+
+                    <nav id="toc-nav" class="space-y-1 text-sm max-h-[60vh] overflow-y-auto pr-1">
+                        <!-- Navigation Links Populated by JS -->
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- Policy Sections Content Column -->
+            <section class="lg:col-span-3 space-y-6" id="sections-container">
+                <!-- Sections dynamically populated by JS -->
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-16 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-xl bg-pet-600 text-white flex items-center justify-center font-bold text-sm">
+                    P+
+                </div>
+                <div class="text-xs text-slate-500 dark:text-slate-400">
+                    &copy; <span id="current-year">2026</span> PSSN Labs. All rights reserved.
+                </div>
+            </div>
+            <div class="text-xs text-slate-500 dark:text-slate-400 text-center sm:text-right" id="footer-support">
+                Official support is available via Google Play store page.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Data and Logic -->
+    <script>
+        // --- Translations Data ---
+        const translations = {
+            en: {
+                labelPolicy: "Legal Document",
+                title: "Privacy Policy — Pet+",
+                subtitle: "Privacy Documentation",
+                lastUpdated: "Last updated: October 2026",
+                intro: "PSSN Labs respects the privacy of Pet+ users. This policy explains, in simple terms, how information is handled in the current version of the app.",
+                tocTitle: "Table of Contents",
+                searchPlaceholder: "Search section...",
+                developerLabel: "Developer",
+                footerSupport: "Support available via Pet+ official Google Play page.",
+                sections: [
+                    {
+                        id: "sec-1",
+                        num: "1",
+                        title: "Information entered by the user",
+                        icon: "fa-user-pen",
+                        content: `<p class="mb-3">Pet+ allows you to record information about pets, such as:</p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800"><i class="fa-solid fa-paw text-pet-500"></i> Pet's name and basic info</li>
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800"><i class="fa-solid fa-image text-pet-500"></i> Photo chosen by the user</li>
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800"><i class="fa-solid fa-list-check text-pet-500"></i> Care tasks and routines</li>
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800"><i class="fa-solid fa-bell text-pet-500"></i> Reminders</li>
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800"><i class="fa-solid fa-weight-scale text-pet-500"></i> Weight records</li>
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800"><i class="fa-solid fa-syringe text-pet-500"></i> Vaccinations</li>
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800"><i class="fa-solid fa-pills text-pet-500"></i> Medications and supplements</li>
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800"><i class="fa-solid fa-calendar-check text-pet-500"></i> Appointments</li>
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800 col-span-1 sm:col-span-2"><i class="fa-solid fa-note-sticky text-pet-500"></i> Notes</li>
+                        </ul>
+                        <p class="mt-4 text-sm text-slate-600 dark:text-slate-400">In the current version, this information is used to provide the app’s features and is stored locally on the device, according to Pet+ architecture.</p>`
+                    },
+                    {
+                        id: "sec-2",
+                        num: "2",
+                        title: "Photos",
+                        icon: "fa-camera",
+                        content: `<p class="mb-2">When the user chooses a photo for their pet, Pet+ uses the image selection mechanism provided by Android.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">The app does not need to request broad access to the photo library when the modern system picker is available.</p>`
+                    },
+                    {
+                        id: "sec-3",
+                        num: "3",
+                        title: "Notifications",
+                        icon: "fa-bell",
+                        content: `<p class="mb-2">Pet+ may use local notifications to remind the user about recorded care tasks.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">The user can control notification permissions and preferences through the app and Android settings.</p>`
+                    },
+                    {
+                        id: "sec-4",
+                        num: "4",
+                        title: "Purchases",
+                        icon: "fa-credit-card",
+                        content: `<p class="mb-2">Purchases such as Ads Free or Premium are processed by Google Play.</p>
+                        <p class="mb-2">Pet+ uses the purchase information supplied by Google Play only to identify and restore features acquired by the user.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">PSSN Labs does not receive full details of the payment method used for the purchase.</p>`
+                    },
+                    {
+                        id: "sec-5",
+                        num: "5",
+                        title: "Advertising and consent",
+                        icon: "fa-rectangle-ad",
+                        content: `<p class="mb-2">The free version of Pet+ may use Google advertising services.</p>
+                        <p class="mb-2">These services may process technical information, identifiers or advertising-related data according to settings, user consent and Google policies.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">When applicable, Pet+ uses consent mechanisms and privacy options provided by Google.</p>`
+                    },
+                    {
+                        id: "sec-6",
+                        num: "6",
+                        title: "Accounts and backend",
+                        icon: "fa-server",
+                        content: `<p class="mb-2">The current version of Pet+ does not require creating an app-specific account to use its main features.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">The main pet and care data do not depend on a PSSN Labs backend to work.</p>`
+                    },
+                    {
+                        id: "sec-7",
+                        num: "7",
+                        title: "Sharing",
+                        icon: "fa-share-nodes",
+                        content: `<p class="mb-2">PSSN Labs does not sell information entered by the user in Pet+.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">External services used by the app, such as Google Play and advertising services, have their own policies and may process the data needed to provide their respective services.</p>`
+                    },
+                    {
+                        id: "sec-8",
+                        num: "8",
+                        title: "Deleting local data",
+                        icon: "fa-trash-can",
+                        content: `<p class="text-sm text-slate-600 dark:text-slate-400">Local data can be removed through mechanisms provided by the app when applicable, or by uninstalling the app or clearing its data on the device.</p>`
+                    },
+                    {
+                        id: "sec-9",
+                        num: "9",
+                        title: "Security",
+                        icon: "fa-shield-heart",
+                        content: `<p class="mb-2">We aim to apply good technical practices to protect the data used by the app.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">No system is completely immune to failures, so we recommend keeping the device protected and up to date.</p>`
+                    },
+                    {
+                        id: "sec-10",
+                        num: "10",
+                        title: "Children",
+                        icon: "fa-child",
+                        content: `<p class="text-sm text-slate-600 dark:text-slate-400">Pet+ was not designed to intentionally collect personal data from children.</p>`
+                    },
+                    {
+                        id: "sec-11",
+                        num: "11",
+                        title: "Changes to this policy",
+                        icon: "fa-arrows-rotate",
+                        content: `<p class="mb-2">This Privacy Policy may be updated when there are relevant changes to the app or the services used.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">The update date will be changed when necessary.</p>`
+                    },
+                    {
+                        id: "sec-12",
+                        num: "12",
+                        title: "Contact",
+                        icon: "fa-envelope",
+                        content: `<p class="mb-2 font-semibold">Developer: PSSN Labs</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Use the support channel published on the app’s official Google Play page.</p>`
+                    },
+                    {
+                        id: "sec-13",
+                        num: "13",
+                        title: "Analytics and reviews",
+                        icon: "fa-chart-line",
+                        content: `<p class="mb-3">Pet+ uses Google Analytics for Firebase to understand feature usage and improve the app. Collection is disabled in Debug, tests and emulators, and is enabled only in Release with valid app-specific configuration. We record usage events and discrete options without sending pet names, photos, notes, free text, weight values, doses, purchase tokens or sensitive identifiers entered in the app. The service may process technical device information and installation identifiers according to Google policies. We do not use these events for ad personalization.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Pet+ may request a Google Play review after positive usage. Eligibility and the interval between requests are stored locally. Reviewing is optional; the app does not receive the content or rating of the review.</p>`
+                    }
+                ]
+            },
+            "pt-br": {
+                labelPolicy: "Documento Legal",
+                title: "Política de Privacidade — Pet+",
+                subtitle: "Documentação de Privacidade",
+                lastUpdated: "Última atualização: Outubro de 2026",
+                intro: "A PSSN Labs respeita a privacidade dos usuários do Pet+. Esta política explica, de forma simples, como as informações são tratadas na versão atual do aplicativo.",
+                tocTitle: "Índice de Seções",
+                searchPlaceholder: "Buscar seção...",
+                developerLabel: "Desenvolvedor",
+                footerSupport: "Suporte disponível através da página oficial do Pet+ no Google Play.",
+                sections: [
+                    {
+                        id: "sec-1",
+                        num: "1",
+                        title: "Informações inseridas pelo usuário",
+                        icon: "fa-user-pen",
+                        content: `<p class="mb-3">O Pet+ permite registrar informações sobre seus pets, tais como:</p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800"><i class="fa-solid fa-paw text-pet-500"></i> Nome do pet e dados básicos</li>
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800"><i class="fa-solid fa-image text-pet-500"></i> Foto escolhida pelo usuário</li>
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800"><i class="fa-solid fa-list-check text-pet-500"></i> Tarefas de cuidado e rotinas</li>
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800"><i class="fa-solid fa-bell text-pet-500"></i> Lembretes</li>
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800"><i class="fa-solid fa-weight-scale text-pet-500"></i> Histórico de peso</li>
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800"><i class="fa-solid fa-syringe text-pet-500"></i> Vacinas</li>
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800"><i class="fa-solid fa-pills text-pet-500"></i> Medicamentos e suplementos</li>
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800"><i class="fa-solid fa-calendar-check text-pet-500"></i> Consultas e compromissos</li>
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800 col-span-1 sm:col-span-2"><i class="fa-solid fa-note-sticky text-pet-500"></i> Anotações gerais</li>
+                        </ul>
+                        <p class="mt-4 text-sm text-slate-600 dark:text-slate-400">Na versão atual, essas informações são utilizadas exclusivamente para fornecer as funcionalidades do aplicativo e permanecem armazenadas localmente no dispositivo, conforme a arquitetura do Pet+.</p>`
+                    },
+                    {
+                        id: "sec-2",
+                        num: "2",
+                        title: "Fotos",
+                        icon: "fa-camera",
+                        content: `<p class="mb-2">Quando o usuário escolhe uma foto para o seu pet, o Pet+ utiliza o seletor de imagens nativo disponibilizado pelo Android.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">O aplicativo não precisa nem solicita acesso amplo à sua galeria de fotos quando o seletor moderno do sistema está disponível.</p>`
+                    },
+                    {
+                        id: "sec-3",
+                        num: "3",
+                        title: "Notificações",
+                        icon: "fa-bell",
+                        content: `<p class="mb-2">O Pet+ pode enviar notificações locais para lembrar você sobre as tarefas de cuidado registradas.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">O usuário pode controlar e alterar as permissões de notificação a qualquer momento no app e nas configurações do Android.</p>`
+                    },
+                    {
+                        id: "sec-4",
+                        num: "4",
+                        title: "Compras",
+                        icon: "fa-credit-card",
+                        content: `<p class="mb-2">Compras como remoção de anúncios (Ads Free) ou versão Premium são processadas diretamente pelo Google Play.</p>
+                        <p class="mb-2">O Pet+ utiliza as informações de compra fornecidas pelo Google Play apenas para identificar e restaurar os recursos adquiridos pelo usuário.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">A PSSN Labs não recebe nem armazena detalhes do seu método de pagamento.</p>`
+                    },
+                    {
+                        id: "sec-5",
+                        num: "5",
+                        title: "Publicidade e consentimento",
+                        icon: "fa-rectangle-ad",
+                        content: `<p class="mb-2">A versão gratuita do Pet+ pode exibir anúncios fornecidos por serviços de publicidade do Google.</p>
+                        <p class="mb-2">Esses serviços podem processar dados técnicos, identificadores ou dados relativos a anúncios de acordo com as preferências do usuário, consentimento e políticas do Google.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Quando aplicável, o Pet+ utiliza os mecanismos formais de consentimento e privacidade do Google.</p>`
+                    },
+                    {
+                        id: "sec-6",
+                        num: "6",
+                        title: "Contas e backend",
+                        icon: "fa-server",
+                        content: `<p class="mb-2">A versão atual do Pet+ não exige a criação de uma conta para utilizar suas funcionalidades principais.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Os dados dos pets e de cuidados não dependem de um servidor backend da PSSN Labs para funcionar.</p>`
+                    },
+                    {
+                        id: "sec-7",
+                        num: "7",
+                        title: "Compartilhamento",
+                        icon: "fa-share-nodes",
+                        content: `<p class="mb-2">A PSSN Labs não vende informações inseridas pelos usuários no Pet+.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Serviços externos utilizados (como Google Play e anúncios) possuem suas próprias políticas e tratam apenas os dados estritamente necessários para a execução de seus serviços.</p>`
+                    },
+                    {
+                        id: "sec-8",
+                        num: "8",
+                        title: "Exclusão de dados locais",
+                        icon: "fa-trash-can",
+                        content: `<p class="text-sm text-slate-600 dark:text-slate-400">Os dados locais podem ser removidos através de mecanismos internos do aplicativo (quando disponíveis), ao desinstalar o app ou ao limpar os dados do aplicativo nas configurações do dispositivo.</p>`
+                    },
+                    {
+                        id: "sec-9",
+                        num: "9",
+                        title: "Segurança",
+                        icon: "fa-shield-heart",
+                        content: `<p class="mb-2">Buscamos adotar boas práticas técnicas para proteger os dados tratados pelo aplicativo.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Nenhum sistema é completamente imune a falhas, por isso recomendamos manter seu dispositivo seguro e atualizado.</p>`
+                    },
+                    {
+                        id: "sec-10",
+                        num: "10",
+                        title: "Crianças",
+                        icon: "fa-child",
+                        content: `<p class="text-sm text-slate-600 dark:text-slate-400">O Pet+ não foi projetado para coletar intencionalmente dados pessoais de crianças.</p>`
+                    },
+                    {
+                        id: "sec-11",
+                        num: "11",
+                        title: "Alterações nesta política",
+                        icon: "fa-arrows-rotate",
+                        content: `<p class="mb-2">Esta Política de Privacidade poderá ser atualizada sempre que houver mudanças relevantes no aplicativo ou nos serviços integrados.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">A data de atualização será revisada sempre que necessário.</p>`
+                    },
+                    {
+                        id: "sec-12",
+                        num: "12",
+                        title: "Contato",
+                        icon: "fa-envelope",
+                        content: `<p class="mb-2 font-semibold">Desenvolvedor: PSSN Labs</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Utilize o canal de suporte oficial publicado na página do aplicativo na Google Play Store.</p>`
+                    },
+                    {
+                        id: "sec-13",
+                        num: "13",
+                        title: "Análise e avaliações",
+                        icon: "fa-chart-line",
+                        content: `<p class="mb-3">O Pet+ utiliza o Google Analytics para Firebase para entender o uso de recursos e aprimorar a experiência do app. A coleta é desativada em builds Debug, testes e emuladores, estando ativa somente em compilações Release com configuração específica e válida. Registramos eventos de uso e opções discretas sem enviar nomes de pets, fotos, notas, textos livres, pesos, doses, tokens de compra ou identificadores sensíveis inseridos no app. O serviço pode processar informações técnicas do aparelho de acordo com os termos do Google. Não utilizamos esses dados para personalização de anúncios.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">O Pet+ pode solicitar uma avaliação na Google Play após uso positivo. A elegibilidade e os intervalos são mantidos localmente. A avaliação é opcional e o app não recebe o conteúdo ou a nota atribuída.</p>`
+                    }
+                ]
+            },
+            es: {
+                labelPolicy: "Documento Legal",
+                title: "Política de Privacidad — Pet+",
+                subtitle: "Documentación de Privacidad",
+                lastUpdated: "Última actualización: Octubre de 2026",
+                intro: "PSSN Labs respeta la privacidad de los usuarios de Pet+. Esta política explica, de manera sencilla, cómo se maneja la información en la versión actual de la aplicación.",
+                tocTitle: "Índice de Secciones",
+                searchPlaceholder: "Buscar sección...",
+                developerLabel: "Desarrollador",
+                footerSupport: "Soporte disponible a través de la página oficial de Pet+ en Google Play.",
+                sections: [
+                    {
+                        id: "sec-1",
+                        num: "1",
+                        title: "Información ingresada por el usuario",
+                        icon: "fa-user-pen",
+                        content: `<p class="mb-3">Pet+ le permite registrar información sobre sus mascotas, como:</p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800"><i class="fa-solid fa-paw text-pet-500"></i> Nombre y datos básicos de la mascota</li>
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800"><i class="fa-solid fa-image text-pet-500"></i> Foto seleccionada por el usuario</li>
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800"><i class="fa-solid fa-list-check text-pet-500"></i> Tareas de cuidado y rutinas</li>
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800"><i class="fa-solid fa-bell text-pet-500"></i> Recordatorios</li>
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800"><i class="fa-solid fa-weight-scale text-pet-500"></i> Historial de peso</li>
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800"><i class="fa-solid fa-syringe text-pet-500"></i> Vacunas</li>
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800"><i class="fa-solid fa-pills text-pet-500"></i> Medicamentos y suplementos</li>
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800"><i class="fa-solid fa-calendar-check text-pet-500"></i> Citas y compromisos</li>
+                            <li class="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800 col-span-1 sm:col-span-2"><i class="fa-solid fa-note-sticky text-pet-500"></i> Notas y observaciones</li>
+                        </ul>
+                        <p class="mt-4 text-sm text-slate-600 dark:text-slate-400">En la versión actual, esta información se utiliza exclusivamente para ofrecer las funciones de la aplicación y permanece almacenada localmente en el dispositivo según la arquitectura de Pet+.</p>`
+                    },
+                    {
+                        id: "sec-2",
+                        num: "2",
+                        title: "Fotos",
+                        icon: "fa-camera",
+                        content: `<p class="mb-2">Cuando el usuario elige una foto para su mascota, Pet+ utiliza el selector de imágenes nativo proporcionado por Android.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">La aplicación no requiere acceso amplio a la galería de fotos cuando el selector moderno del sistema está disponible.</p>`
+                    },
+                    {
+                        id: "sec-3",
+                        num: "3",
+                        title: "Notificaciones",
+                        icon: "fa-bell",
+                        content: `<p class="mb-2">Pet+ puede enviar notificaciones locales para recordarle las tareas de cuidado registradas.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">El usuario puede administrar los permisos y preferencias de notificación en cualquier momento desde la app y en los ajustes de Android.</p>`
+                    },
+                    {
+                        id: "sec-4",
+                        num: "4",
+                        title: "Compras",
+                        icon: "fa-credit-card",
+                        content: `<p class="mb-2">Las compras como eliminación de anuncios (Ads Free) o versión Premium se procesan directamente mediante Google Play.</p>
+                        <p class="mb-2">Pet+ utiliza la información de compra suministrada por Google Play únicamente para identificar y restaurar los recursos adquiridos.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">PSSN Labs no recibe ni almacena detalles del método de pago utilizado.</p>`
+                    },
+                    {
+                        id: "sec-5",
+                        num: "5",
+                        title: "Publicidad y consentimiento",
+                        icon: "fa-rectangle-ad",
+                        content: `<p class="mb-2">La versión gratuita de Pet+ puede mostrar publicidad a través de los servicios de anuncios de Google.</p>
+                        <p class="mb-2">Dichos servicios pueden procesar datos técnicos, identificadores o información publicitaria de acuerdo con las configuraciones del usuario, su consentimiento y las políticas de Google.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Cuando aplica, Pet+ utiliza los mecanismos de consentimiento y privacidad habilitados por Google.</p>`
+                    },
+                    {
+                        id: "sec-6",
+                        num: "6",
+                        title: "Cuentas y backend",
+                        icon: "fa-server",
+                        content: `<p class="mb-2">La versión actual de Pet+ no requiere crear una cuenta de usuario para utilizar sus funciones principales.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Los datos principales de mascotas y cuidados no dependen de un servidor backend de PSSN Labs para funcionar.</p>`
+                    },
+                    {
+                        id: "sec-7",
+                        num: "7",
+                        title: "Compartición de datos",
+                        icon: "fa-share-nodes",
+                        content: `<p class="mb-2">PSSN Labs no vende la información ingresada por los usuarios en Pet+.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Los servicios externos utilizados (como Google Play o publicidad) cuentan con sus propias políticas y tratan únicamente los datos requeridos para brindar sus servicios.</p>`
+                    },
+                    {
+                        id: "sec-8",
+                        num: "8",
+                        title: "Eliminación de datos locales",
+                        icon: "fa-trash-can",
+                        content: `<p class="text-sm text-slate-600 dark:text-slate-400">Los datos locales pueden ser eliminados mediante las opciones internas del app (cuando estén disponibles), desinstalando la aplicación o borrando sus datos en el menú de configuración del dispositivo.</p>`
+                    },
+                    {
+                        id: "sec-9",
+                        num: "9",
+                        title: "Seguridad",
+                        icon: "fa-shield-heart",
+                        content: `<p class="mb-2">Buscamos implementar buenas prácticas técnicas para proteger la información que gestiona la aplicación.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Ningún sistema es completamente infalible, por lo que recomendamos mantener su dispositivo protegido y actualizado.</p>`
+                    },
+                    {
+                        id: "sec-10",
+                        num: "10",
+                        title: "Menores de edad",
+                        icon: "fa-child",
+                        content: `<p class="text-sm text-slate-600 dark:text-slate-400">Pet+ no fue diseñada para recopilar intencionadamente datos personales de niños o menores de edad.</p>`
+                    },
+                    {
+                        id: "sec-11",
+                        num: "11",
+                        title: "Cambios en esta política",
+                        icon: "fa-arrows-rotate",
+                        content: `<p class="mb-2">Esta Política de Privacidad podrá actualizarse cuando existan cambios relevantes en la aplicación o en los servicios asociados.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">La fecha de actualización se modificará cuando corresponda.</p>`
+                    },
+                    {
+                        id: "sec-12",
+                        num: "12",
+                        title: "Contacto",
+                        icon: "fa-envelope",
+                        content: `<p class="mb-2 font-semibold">Desarrollador: PSSN Labs</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Utilice el canal de soporte oficial publicado en la ficha de la aplicación en Google Play.</p>`
+                    },
+                    {
+                        id: "sec-13",
+                        num: "13",
+                        title: "Analítica y reseñas",
+                        icon: "fa-chart-line",
+                        content: `<p class="mb-3">Pet+ utiliza Google Analytics para Firebase con el fin de entender el uso de funciones y mejorar la app. La recopilación se deshabilita en Debug, pruebas y emuladores, estando activa únicamente en compilaciones Release con configuración válida. Registramos eventos de uso y opciones discretas sin enviar nombres de mascotas, fotos, notas, texto libre, pesos, dosis, tokens de compra o identificadores sensibles. El servicio puede procesar datos técnicos del dispositivo según las políticas de Google. No usamos estos datos para personalización de anuncios.</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Pet+ puede solicitar una reseña en Google Play tras un uso positivo. La elegibilidad e intervalos se gestionan localmente. La reseña es opcional y la app no recibe el contenido ni la calificación enviada.</p>`
+                    }
+                ]
+            }
+        };
+
+        // Current Application State
+        let currentLang = 'en';
+
+        // Initialize Theme & Language on Load
+        window.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+            initLanguage();
+        });
+
+        // --- Theme Handler ---
+        function initTheme() {
+            const savedTheme = localStorage.getItem('petplus_theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+                updateThemeIcons(true);
+            } else {
+                document.documentElement.classList.remove('dark');
+                updateThemeIcons(false);
+            }
+        }
+
+        function toggleTheme() {
+            const isDark = document.documentElement.classList.toggle('dark');
+            localStorage.setItem('petplus_theme', isDark ? 'dark' : 'light');
+            updateThemeIcons(isDark);
+        }
+
+        function updateThemeIcons(isDark) {
+            const sun = document.getElementById('theme-icon-sun');
+            const moon = document.getElementById('theme-icon-moon');
+            if (isDark) {
+                sun.classList.remove('hidden');
+                moon.classList.add('hidden');
+            } else {
+                sun.classList.add('hidden');
+                moon.classList.remove('hidden');
+            }
+        }
+
+        // --- Language Switcher Handler ---
+        function initLanguage() {
+            const browserLang = navigator.language.toLowerCase();
+            let defaultLang = 'en';
+            
+            if (browserLang.startsWith('pt')) defaultLang = 'pt-br';
+            else if (browserLang.startsWith('es')) defaultLang = 'es';
+
+            const savedLang = localStorage.getItem('petplus_lang') || defaultLang;
+            currentLang = savedLang;
+            
+            document.getElementById('lang-select').value = savedLang;
+            renderLanguage(savedLang);
+        }
+
+        function changeLanguage(langKey) {
+            currentLang = langKey;
+            localStorage.setItem('petplus_lang', langKey);
+            renderLanguage(langKey);
+        }
+
+        function renderLanguage(lang) {
+            const data = translations[lang] || translations['en'];
+
+            // Header & Info
+            document.getElementById('label-policy').innerText = data.labelPolicy;
+            document.getElementById('policy-title').innerText = data.title;
+            document.getElementById('header-subtitle').innerText = data.subtitle;
+            document.getElementById('last-updated').innerText = data.lastUpdated;
+            document.getElementById('policy-intro').innerText = data.intro;
+            document.getElementById('toc-title').querySelector('span').innerText = data.tocTitle;
+            document.getElementById('sec-search').placeholder = data.searchPlaceholder;
+            document.getElementById('footer-support').innerText = data.footerSupport;
+
+            // Render Table of Contents Links
+            const tocNav = document.getElementById('toc-nav');
+            tocNav.innerHTML = data.sections.map(sec => `
+                <a href="#${sec.id}" class="toc-item flex items-center px-3 py-2 text-slate-600 dark:text-slate-400 hover:text-pet-600 dark:hover:text-pet-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-xl transition font-medium">
+                    <span class="w-5 text-xs font-bold text-pet-500">${sec.num}.</span>
+                    <span class="truncate text-xs">${sec.title}</span>
+                </a>
+            `).join('');
+
+            // Render Main Sections
+            const container = document.getElementById('sections-container');
+            container.innerHTML = data.sections.map(sec => `
+                <article id="${sec.id}" class="section-card p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800/80 shadow-sm transition hover:shadow-md">
+                    <div class="flex items-center gap-3.5 mb-4 border-b border-slate-100 dark:border-slate-800 pb-4">
+                        <div class="w-10 h-10 rounded-2xl bg-pet-50 dark:bg-pet-950/60 border border-pet-200 dark:border-pet-800 text-pet-600 dark:text-pet-400 flex items-center justify-center font-bold text-sm shrink-0">
+                            <i class="fa-solid ${sec.icon}"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-pet-600 dark:text-pet-400 uppercase tracking-wider">Section ${sec.num}</span>
+                            <h2 class="text-xl font-bold text-slate-900 dark:text-white leading-snug">${sec.title}</h2>
+                        </div>
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-300 leading-relaxed text-sm sm:text-base">
+                        ${sec.content}
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        // --- Live Section Search Filter ---
+        function filterSections() {
+            const query = document.getElementById('sec-search').value.toLowerCase();
+            const data = translations[currentLang];
+
+            data.sections.forEach(sec => {
+                const card = document.getElementById(sec.id);
+                const match = sec.title.toLowerCase().includes(query) || sec.content.toLowerCase().includes(query);
+                if (card) {
+                    card.style.display = match ? 'block' : 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
